@@ -1,0 +1,24 @@
+$centerSize: 360px;
+$defaultSize: 48px;
+$halfSize: 16px;
+$duration: 0.24s;
+$radius: 16px;
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media ( max-width: 768px ) {
+  $halfSize: 8px !important;
+  .header {
+    height: $halfSize;
+    padding: 0 $halfSize;
+  }
+  .main {
+    padding: 0 $halfSize;
+  }
+}
