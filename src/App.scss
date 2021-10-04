@@ -10,9 +10,131 @@ $radius: 16px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  .main {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    .container {
+      height: 100%;
+      min-height: calc(100vh - 112px);
+      &.sub {
+        justify-content: flex-start;
+        .contents {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .visual {
+            position: relative;
+            height: 450px;
+            background-color: #343434;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 16px;
+            background-size: cover;
+            background-position: center;
+            &::before {
+              content: "";
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.75) 0,
+                rgba(0, 0, 0, 0.5) 50%,
+                rgba(0, 0, 0, 0.5) 50%,
+                rgba(0, 0, 0, 0) 90%
+              );
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              transition: opacity 1s ease-out;
+              z-index: 0;
+              pointer-events: none;
+            }
+            .description {
+              color: #fff;
+              width: 100%;
+              max-width: 980px;
+              display: flex;
+              flex-direction: column;
+              z-index: 1;
+              .desLabel {
+                color: #0072ce;
+                font-size: 14px;
+                font-weight: 500;
+              }
+              .desTitle {
+                font-size: 21px;
+                font-weight: 500;
+              }
+            }
+          }
+          .panner {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .pannerHead {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 64px;
+              .pannerTitle {
+                max-width: 980px;
+                width: 100%;
+              }
+            }
+            .pannerBody {
+              display: flex;
+              justify-content: center;
+              background-color: #efefef;
+              padding: 48px 0;
+              .pannerContents {
+                width: 100%;
+                max-width: 980px;
+                background-color: #fff;
+                line-height: 28px;
+                font-size: 16px;
+                word-break: keep-all;
+                padding: 16px;
+              }
+              .pannerList {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 980px;
+                .listItem {
+                  border: 1px solid #d5d5d5;
+                  border-bottom: 0;
+                  border-right: 0;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  align-items: center;
+                  height: 163.33333px;
+                  width: 163.33333px;
+                  background: #fff;
+                  padding: 16px;
+                  &:nth-child(6n + 1) {
+                    border-left: none;
+                  }
+                  &:nth-child(-n + 6) {
+                    border-top: none;
+                  }
+                  .itemImage{
+                    width: 100%;
+                    max-width: 98px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
   $halfSize: 8px !important;
   .header {
     height: $halfSize;

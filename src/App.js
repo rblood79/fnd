@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 import { Route } from "react-router-dom";
-import classNames from 'classnames';
 import './App.scss';
 //import { isMobile } from 'react-device-detect';
 import Head from './component/Head/';
@@ -8,19 +7,22 @@ import Foot from './component/Foot/';
 
 import Home from './page/Home';
 import About from './page/About/';
+import Service from './page/Service/';
+import Partner from './page/Partner/';
+import Customer from './page/Customer/';
 
 const App = (props) => {
   //const { uid } = props.match.params;
-  useEffect(() => {
-
-  }, []);
 
   return (
     <div className="App">
       <Head />
-      <main>
+      <main className='main'>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/service" component={Service} />
+        <Route path="/partner" component={Partner} />
+        <Route path="/customer" component={Customer} />
       </main>
       <Foot />
     </div>
