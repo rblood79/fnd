@@ -70,9 +70,16 @@ section {
                 width: 480px;
                 right: 0;
             }
+            .mobileInImage{
+                width: 270px;
+                border-radius: 32px;
+            }
         }
         .mobileFrame {
             z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

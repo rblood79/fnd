@@ -23,7 +23,7 @@ const App = (props) => {
             <p>TVMS는 밸브의 견적요청이나 수주와 발주를 시작으로 설치및 수명관리 까지 보다 안전한 환경을 책임지는 토탈 솔루션입니다</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/mobileMain.png").default} alt='FNDSOFT' />
+            <img src={require("../../images/main.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div>
@@ -41,7 +41,7 @@ const App = (props) => {
             <p>PC 에서 관리하던 정보를 모바일에서도 바로 확인하고 제품설치 등록도 물론 가능하죠 휴대폰만 있다면.</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/mobileMain.png").default} alt='FNDSOFT' />
+            <img src={require("../../images/list.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div>
@@ -59,7 +59,7 @@ const App = (props) => {
             <p>별도의 단말기가 필요없이 QR코드스캔 으로 밸브의 모든 이력을 확인하고 현재 상태를 관리 할 수 있습니다.</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/mobileScan.png").default} alt='FNDSOFT' />
+            <img src={require("../../images/scan.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div>
