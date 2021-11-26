@@ -4,7 +4,7 @@ import 'remixicon/fonts/remixicon.css';
 const App = (props) => {
   return (
     <footer className="foot">
-      F&D All rights reserved.
+      Copyright ⓒ F&D Soft Co.,LTD. All Rights Reserved
     </footer>
   );
 }

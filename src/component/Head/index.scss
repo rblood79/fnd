@@ -1,6 +1,6 @@
 .head {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 110;
     width: 100%;
@@ -8,21 +8,30 @@
     padding: 0 24px;
     position: sticky;
     top: 0;
-    background-color: #d5d5d5;
+    .logo {
+        position: absolute;
+        left: 16px;
+        img {
+            height: 36px;
+        }
+    }
     .nav {
         display: flex;
         height: 100%;
+        width: 425px;
+        justify-content: space-between;
         .navButton {
             display: flex;
             align-items: center;
-            padding: 0 32px;
+            padding: 0 16px;
             height: 100%;
             font-size: 16px;
             font-weight: 500;
+            border-bottom: 2px solid transparent;
+            color: #a7a7a7;
             &.active {
-                background-color: #343434;
                 border-bottom: 2px solid #000;
-                color: #0072ce;
+                color: #241B53;
             }
         }
     }

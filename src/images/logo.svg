@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180.853" height="47" viewBox="0 0 180.853 47">
+  <g id="그룹_1" data-name="그룹 1" transform="translate(-301 -237.361)">
+    <g id="그룹_10" data-name="그룹 10" transform="translate(301 250.361)">
+      <g id="그룹_7" data-name="그룹 7" transform="translate(0 0)">
+        <g id="그룹_4" data-name="그룹 4">
+          <path id="패스_6" data-name="패스 6" d="M280.7,228.612h11.9v6.058H285.24a1.864,1.864,0,0,0-1.087.457,1.717,1.717,0,0,0-.429,1.058v16.226h-6.058v-20.77A3.03,3.03,0,0,1,280.7,228.612Z" transform="translate(-277.666 -228.612)" fill="#4c4181"/>
+        </g>
+        <g id="그룹_11" data-name="그룹 11" transform="translate(6.924)">
+          <path id="패스_6-2" data-name="패스 6-2" d="M302.24,252.411h-11.9v-6.058H297.7a1.87,1.87,0,0,0,1.085-.457,1.712,1.712,0,0,0,.43-1.058V228.612h6.057v20.77A3.029,3.029,0,0,1,302.24,252.411Z" transform="translate(-290.34 -228.612)" fill="#4c4181"/>
+        </g>
+      </g>
+    </g>
+    <text id="FND_SOFT" data-name="FND SOFT" transform="translate(324.853 274.361)" fill="#241b53" font-size="32" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700"><tspan x="0" y="0">FND SOFT</tspan></text>
+  </g>
+</svg>

@@ -3,10 +3,10 @@ html {
   body {
     margin: 0;
     font-family: "Noto Sans KR", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #d5d5d5;
+    background-color: #fff;
     color: #343434;
   }
 }
@@ -24,7 +24,11 @@ button {
 * {
   box-sizing: border-box;
 }
-
+img {
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 ul {
   list-style: none;
   margin: 0;
@@ -37,13 +41,21 @@ a {
   outline: none;
 }
 
-p, h2 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   padding: 0;
   margin: 0;
 }
-
-h2 {
-  font-weight: 500;
+p {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+p + p {
+  padding-top: 24px;
 }
 b {
   font-weight: 900;

@@ -8,15 +8,13 @@ import 'remixicon/fonts/remixicon.css';
 const App = (props) => {
   return (
     <header className="head">
-      <Link className='logo' to="/">F&D</Link>
+      <Link className='logo' to="/"><img src={require("../../images/logo.svg").default} alt='FNDSOFT' /></Link>
       <nav className='nav'>
-        <NavLink className='navButton' exact to="/">홈</NavLink>
-        <NavLink className='navButton' to="/about">회사소개</NavLink>
-        <NavLink className='navButton' to="/service">사업분야</NavLink>
-        <NavLink className='navButton' to="/partner">주요고객</NavLink>
-        <NavLink className='navButton' to="/customer">견적의뢰</NavLink>
+        <NavLink className='navButton' exact to="/">시작</NavLink>
+        <NavLink className='navButton' to="/service">사업</NavLink>
+        <NavLink className='navButton' to="/about">소개</NavLink>
+        <NavLink className='navButton' to="/customer">문의</NavLink>
       </nav>
-      <button>빠른상담</button>
     </header>
   );
 }
