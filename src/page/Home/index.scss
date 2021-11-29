@@ -70,9 +70,12 @@ section {
                 width: 480px;
                 right: 0;
             }
-            .mobileInImage{
+            .mobileInImage {
                 width: 270px;
                 border-radius: 32px;
+            }
+            p:last-child {
+                padding-bottom: 1.6em;
             }
         }
         .mobileFrame {
@@ -121,4 +124,33 @@ section {
     .contents {
         max-width: 768px;
     }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        border: 1px solid #f00;
+        padding: 0 16px;
+        .contents {
+            flex-direction: column;
+            > div {
+                flex: 1;
+                .imageOver {
+                    width: 330px;
+                }
+            }
+            .disable {
+                display: none;
+            }
+        }
+    }
+    .home {
+        .contents {
+            .title {
+                font-size: 36px;
+                text-align: center;
+            }
+        }
+    }
+
 }

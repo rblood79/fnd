@@ -26,9 +26,8 @@ const App = (props) => {
             <img src={require("../../images/main.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
-          <div>
-
-          <img src={require("../../images/desktopMain.png").default} alt='FNDSOFT' className='imageRight' />
+          <div className='disable'>
+            <img src={require("../../images/desktopMain.png").default} alt='FNDSOFT' className='imageRight' />
             <img src={require("../../images/desktopFrame.png").default} alt='FNDSOFT' className='imageRight' />
           </div>
         </div>
@@ -44,8 +43,7 @@ const App = (props) => {
             <img src={require("../../images/list.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
-          <div>
-
+          <div className='disable'>
             <img src={require("../../images/desktopMain.png").default} alt='FNDSOFT' className='imageRight' />
             <img src={require("../../images/desktopFrame.png").default} alt='FNDSOFT' className='imageRight' />
           </div>
@@ -62,7 +60,7 @@ const App = (props) => {
             <img src={require("../../images/scan.png").default} alt='FNDSOFT' className='mobileInImage'/>
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
-          <div>
+          <div className='disable'>
             <img src={require("../../images/mobileDetail.png").default} alt='FNDSOFT' />
           </div>
         </div>

@@ -15,12 +15,5 @@ $radius: 16px;
 }
 
 @media (max-width: 768px) {
-  $halfSize: 8px !important;
-  .header {
-    height: $halfSize;
-    padding: 0 $halfSize;
-  }
-  .main {
-    padding: 0 $halfSize;
-  }
+  
 }
