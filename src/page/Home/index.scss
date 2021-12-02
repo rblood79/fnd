@@ -114,7 +114,7 @@ section {
 }
 
 .about {
-    z-index: 4;
+    
     background-image: url("../../images/sean-pollock-PhYq704ffdA-unsplash.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -123,6 +123,39 @@ section {
     background-color: rgba(0, 0, 0, 0.6);
     .contents {
         max-width: 768px;
+    }
+}
+
+.contect {
+    z-index: 4;
+    background-color: #fff;
+    .contents {
+        max-width: 768px;
+        form {
+            display: flex;
+            flex-direction: column;
+            input[type='text'], input[type='email'], input[type='tel'], textarea{
+                resize: none;
+                border: 1px solid #ccc;
+                height: 48px;
+                font-size: 16px;
+                padding: 0 16px;
+                margin-bottom: 16px;
+                &::placeholder {
+                    color: #a7a7a7;
+                }
+            }
+            textarea {
+                height: auto;
+                padding: 16px;
+            }
+            input[type='submit']{
+                height: 56px;
+                font-size: 16px;
+                border-width: 1px;
+                border-color: rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 }
 

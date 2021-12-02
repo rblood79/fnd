@@ -1,8 +1,20 @@
 import './index.scss';
 import 'remixicon/fonts/remixicon.css';
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 const App = (props) => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('fndsoft', 'template_fndsoft', form.current, 'user_DQW2PRCMKLp8OC5gpuZeT')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <div className="container">
@@ -23,7 +35,7 @@ const App = (props) => {
             <p>TVMS는 밸브의 견적요청이나 수주와 발주를 시작으로 설치및 수명관리 까지 보다 안전한 환경을 책임지는 토탈 솔루션입니다</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/main.png").default} alt='FNDSOFT' className='mobileInImage'/>
+            <img src={require("../../images/main.png").default} alt='FNDSOFT' className='mobileInImage' />
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div className='disable'>
@@ -40,7 +52,7 @@ const App = (props) => {
             <p>PC 에서 관리하던 정보를 모바일에서도 바로 확인하고 제품설치 등록도 물론 가능하죠 휴대폰만 있다면.</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/list.png").default} alt='FNDSOFT' className='mobileInImage'/>
+            <img src={require("../../images/list.png").default} alt='FNDSOFT' className='mobileInImage' />
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div className='disable'>
@@ -57,7 +69,7 @@ const App = (props) => {
             <p>별도의 단말기가 필요없이 QR코드스캔 으로 밸브의 모든 이력을 확인하고 현재 상태를 관리 할 수 있습니다.</p>
           </div>
           <div className='mobileFrame'>
-            <img src={require("../../images/scan.png").default} alt='FNDSOFT' className='mobileInImage'/>
+            <img src={require("../../images/scan.png").default} alt='FNDSOFT' className='mobileInImage' />
             <img src={require("../../images/mobileFrame.png").default} alt='FNDSOFT' className='imageOver' />
           </div>
           <div className='disable'>
@@ -74,6 +86,27 @@ const App = (props) => {
             <p>당사의 최적화된 수명관리 기술은 시간 환경 까지 다양하고 완벽한 토탈 밸브케어에 주력을 하고 있으며, 이로 인한 기술의 발전 국가의 기반산업과, 경제 발전을 위한 모든 산업분야에 필수적으로 사용되어지는, 밸브관리의 안전에 기여하고 있습니다. </p>
             <p>다가올 미래에 전기, 전자, 반도체, 항공, 선박, 인공위성등 다양한 분야에 활용되어 지는 밸브의 기술발전에 앞장서서, 신뢰 받는 제품으로 기술개발 및 생산 공급을 고객에게 최고의 만족을 제공할 수 있도록 무한한 노력을 강구하겠습니다.</p>
             <p>고객 여러분의 지속적인 관심과 지도 편달을 부탁 드리겠습니다. 감사합니다.</p>
+          </div>
+        </div>
+      </section>
+      <section className='section contect' id='contect'>
+        <div className='contents'>
+          <div>
+            <h2 className='label'>우리는</h2>
+            <h3 className='title'>빠른 답변을 드리겠습니다</h3>
+            <form ref={form} onSubmit={sendEmail}>
+              <label>담당자</label>
+              <input type="text" name="user_name" placeholder='이름을 입력하세요'/>
+              <label>회사명</label>
+              <input type="text" name="user_company" />
+              <label>연락처</label>
+              <input type="tel" name="user_phone" />
+              <label>이메일</label>
+              <input type="email" name="user_email" />
+              <label>문의사항</label>
+              <textarea name="message" rows="9"/>
+              <input type="submit" value="보내기" />
+            </form>
           </div>
         </div>
       </section>
