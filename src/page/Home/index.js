@@ -7,18 +7,25 @@ const App = (props) => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('fndsoft', 'template_fndsoft', form.current, 'user_DQW2PRCMKLp8OC5gpuZeT')
+    const check = form.current.user_name.value ? form.current.user_company.value ? form.current.user_phone.value ? form.current.user_email.value ? form.current.message.value ? 'ok' : 'fail': 'fail': 'fail': 'fail': 'fail'
+    if(check === 'ok'){
+      emailjs.sendForm('fndsoft', 'template_fndsoft', form.current, 'user_DQW2PRCMKLp8OC5gpuZeT')
       .then((result) => {
-        console.log(result.text);
+        alert('문의글이 전달 되었습니다.')
+        form.current.user_name.value = '';
+        form.current.user_company.value = '';
+        form.current.user_phone.value = '';
+        form.current.user_email.value = '';
+        form.current.message.value = '';
       }, (error) => {
         console.log(error.text);
       });
+    };
   };
 
   return (
     <div className="container">
-      <section className='section home'>
+      <section className='section home' id="home">
         <div className='contents'>
           <p className='label'>F&D SOFT</p>
           <p className='title'>THE 안전한 환경을 위해 노력합니다</p>
@@ -26,7 +33,7 @@ const App = (props) => {
         </div>
         <img src={require("../../images/ci.svg").default} alt='FNDSOFT' />
       </section>
-      <section className='section service0'>
+      <section className='section service0' id="service">
         <div className='contents'>
           <div>
             <h2 className='label'>밸브관리 시스템</h2>
@@ -98,11 +105,11 @@ const App = (props) => {
               <label>담당자</label>
               <input type="text" name="user_name" placeholder='이름을 입력하세요'/>
               <label>회사명</label>
-              <input type="text" name="user_company" />
+              <input type="text" name="user_company" placeholder='업체명을 입력하세요'/>
               <label>연락처</label>
-              <input type="tel" name="user_phone" />
+              <input type="tel" name="user_phone" placeholder='연락받으실 번호'/>
               <label>이메일</label>
-              <input type="email" name="user_email" />
+              <input type="email" name="user_email" placeholder='답변받으실 메일주소'/>
               <label>문의사항</label>
               <textarea name="message" rows="9"/>
               <input type="submit" value="보내기" />

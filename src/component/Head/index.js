@@ -10,10 +10,10 @@ const App = (props) => {
     <header className="head">
       <Link className='logo' to="/"><img src={require("../../images/logo.svg").default} alt='FNDSOFT' /></Link>
       <nav className='nav'>
-        <NavLink className='navButton' exact to="/">시작</NavLink>
-        <NavLink className='navButton' to="/service">사업</NavLink>
-        <NavLink className='navButton' to="/about">소개</NavLink>
-        <NavLink className='navButton' to="/customer">문의</NavLink>
+        <a className='navButton' href="/">시작</a>
+        <a className='navButton' href="#service">사업</a>
+        <a className='navButton' href="#about">소개</a>
+        <a className='navButton' href="#contect">문의</a>
       </nav>
     </header>
   );
